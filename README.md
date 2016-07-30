@@ -1,2 +1,1 @@
 # warmcolors.info
-warmcolors.info
