@@ -1,0 +1,27 @@
+{
+  "name": "warmcolors.info",
+  "version": "1.0.0",
+  "description": "Warmcolors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass --output-style compressed --source-map true ./assets/css/main.scss -o ./assets/css",
+    "sassw": "node-sass -w --output-style nested ./assets/css/main.scss -o ./assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowply/warmcolors.info.git"
+  },
+  "author": "Sho Mizutani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lowply/warmcolors.info/issues"
+  },
+  "homepage": "https://github.com/lowply/warmcolors.info#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0"
+  },
+  "dependencies": {
+    "npm": "^6.0.0"
+  }
+}
