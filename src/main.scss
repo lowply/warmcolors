@@ -1,6 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
-html, body {
+body {
+	margin: 20px auto;
 	color: #4B4B4B;
 }
 
@@ -29,6 +30,7 @@ html, body {
 	color: #333333;
 	line-height: 14px;
 	letter-spacing: 0.1em;
+	border: 1px solid #fff;
 }
 .event-wc {
 	font-family: Arial, Helvetica, sans-serif;

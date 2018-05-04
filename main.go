@@ -7,13 +7,14 @@ import (
 )
 
 func handler(page string) {
-	_, err := os.Stat("templates/" + page + ".tmpl")
+	template_path := "templates/" + page + ".tmpl"
+	_, err := os.Stat(template_path)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	t := template.Must(template.ParseFiles(
-		"templates/"+page+".tmpl",
+		template_path,
 		"templates/base.tmpl",
 		"templates/_header.tmpl",
 		"templates/_footer.tmpl",
@@ -32,7 +33,7 @@ func handler(page string) {
 	}
 }
 
-func handler_station(sub string, num string) {
+func handler_station(num string, sub string) {
 	type Station struct {
 		Subject string
 		Number  string
@@ -60,12 +61,15 @@ func handler_station(sub string, num string) {
 }
 
 func handler_profile(name string) {
-	type Profile struct {
-		Name string
+	template_path := "templates/profile_" + name + ".tmpl"
+	_, err := os.Stat(template_path)
+	if err != nil {
+		log.Fatal(err)
 	}
 
 	t := template.Must(template.ParseFiles(
-		"templates/profile_each.tmpl",
+		template_path,
+		"templates/profile_base.tmpl",
 		"templates/base.tmpl",
 		"templates/_header.tmpl",
 		"templates/_footer.tmpl",
@@ -78,11 +82,7 @@ func handler_profile(name string) {
 	}
 	defer file.Close()
 
-	data := Profile{
-		Name: name,
-	}
-
-	err = t.ExecuteTemplate(file, "base", data)
+	err = t.ExecuteTemplate(file, "base", nil)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -96,14 +96,27 @@ func main() {
 	handler("event_clubnostyle")
 	handler("profile")
 	handler_profile("akira")
+	handler_profile("kga")
+	handler_profile("lowply")
+	handler_profile("nami")
+	handler_profile("acchi")
+	handler_profile("sav")
+	handler("profile_guest")
+	handler_profile("sower")
+	handler_profile("kiyomi")
+	handler_profile("makoto")
+	handler_profile("deeizm")
+	handler_profile("velocity")
+	handler_profile("inza")
 	handler("radio")
-	handler_station("lowply - studio mix - dec.04", "01")
-	handler_station("akira - studio mix - aug.04 for glo.jp", "02")
-	handler_station("nami - PtMIX ginger - mar.05", "03")
-	handler_station("velocity - commix promotion studio mix - mar.05", "04")
-	handler_station("dj ray - klockworks - mar.05", "05")
-	handler_station("nami - PtMIX caramel - aug.05 [new]", "06")
+	handler_station("01", "lowply - studio mix - dec.04")
+	handler_station("02", "akira - studio mix - aug.04 for glo.jp")
+	handler_station("03", "nami - PtMIX ginger - mar.05")
+	handler_station("04", "velocity - commix promotion studio mix - mar.05")
+	handler_station("05", "dj ray - klockworks - mar.05")
+	handler_station("06", "nami - PtMIX caramel - aug.05 [new]")
 	handler("chart")
 	handler("chart_before")
 	handler("link")
+	handler("topics050325")
 }

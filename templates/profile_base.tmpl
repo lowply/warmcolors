@@ -28,40 +28,7 @@
 							<a href="profile_sav.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image299','','img/sidemenu/sm_sav_f2.gif',1)"><img src="assets/img/sidemenu/sm_sav.gif" alt="savchibo - warm colors" name="Image299" width="93" height="14" border="0"></a><br>
 						</td>
 						<td class="mein-line"><img src="assets/img/_.gif" width="3" height="11"></td>
-						<td width="522" valign="top" background="assets/img/r2_9.gif" class="mein-margine">
-							<img src="assets/img/profile/title/warmcolors.gif" alt="warmcolors" width="182" height="33">
-							<table width="100%"  border="0" cellspacing="1" cellpadding="3">
-								<tr>
-									<td height="4" class="td-1"><img src="assets/img/_.gif" width="1" height="4"></td>
-								</tr>
-								<tr>
-									<td class="td-2"><table width="100%"  border="0" cellspacing="0" cellpadding="2">
-											<tr>
-												<td valign="top" class="profile-img"><img src="assets/img/profile/warmcolors.jpg" width="160" height="119"></td>
-												<td class="profile-st">
-													<p>数々のスタイルが存在する現在のDrum&amp;Bassシーンにおいて、ミュージカルサイドに重点を置き、かつオープンマインドに様々なスタイルを織りまぜるDeeper Liquid Funk Drum&amp;Bass Party &quot;WarmColors&quot;</p>
-													<p>レジデントを勤めるのはAKIRA, KGA, LOWPLY, NAMIの4DJと、MC acchi。2004年8月に行われたオープニングパーティではヒューマニズムあふれるフロアを演出する事に成功し、東京Drum&amp;Bassシーンに新たなスタイルを確立した。WarmColorsでしか感じ取れない&quot;カラー&quot;を是非体感して欲しい。</p>
-													<table width="100%"  border="0" cellspacing="0" cellpadding="3">
-														<tr>
-															<td valign="top" bgcolor="#FFFFFF"><img src="assets/img/sidemenu/sm_dj.gif" width="93" height="14"><a href="profile_akira.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image391','','img/sidemenu/sm_akira_f2.gif',1)"><br>
-																	<img src="assets/img/sidemenu/sm_akira.gif" alt="akira - good looking records expansions warm colors" name="Image391" width="93" height="14" border="0" id="Image391"></a><a href="profile_kga.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image401','','img/sidemenu/sm_kga_f2.gif',1)"><br>
-																	<img src="assets/img/sidemenu/sm_kga.gif" alt="kga - warm colors" name="Image401" width="93" height="14" border="0" id="Image401"></a><a href="profile_lowply.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image411','','img/sidemenu/sm_lowply_f2.gif',1)"><br>
-																	<img src="assets/img/sidemenu/sm_lowply.gif" alt="lowply - warm colors" name="Image411" width="93" height="14" border="0" id="Image411"><br>
-															</a><a href="profile_nami.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image421','','img/sidemenu/sm_nami_f2.gif',1)"><img src="assets/img/sidemenu/sm_nami.gif" alt="nami - warm colors" name="Image421" width="93" height="14" border="0" id="Image421"></a></td>
-															<td valign="top" bgcolor="#FFFFFF"><img src="assets/img/sidemenu/sm_mc.gif" width="93" height="14"><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image39','','img/sidemenu/sm_akira_f2.gif',1)"></a><br>
-																<a href="profile_acchi.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4311','','img/sidemenu/sm_acchi_f2.gif',1)">  <img src="assets/img/sidemenu/sm_acchi.gif" alt="acchi - warm colors" name="Image4311" width="93" height="14" border="0" id="Image431"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image39','','img/sidemenu/sm_akira_f2.gif',1)"></a><br></td>
-														</tr>
-													</table>
-													<p>&nbsp; </p></td>
-											</tr>
-									</table></td>
-								</tr>
-								<tr>
-									<td height="4" class="td-1"><img src="assets/img/_.gif" width="1" height="4"></td>
-								</tr>
-							</table>
-							<img src="assets/img/line.gif" width="494" height="13"><br>
-						</td>
+						{{ template "profile_content" . }}
 						<td width="11" align="right" background="assets/img/r2_7.gif"><img src="assets/img/_.gif" width="11" height="11"></td>
 					</tr>
 					<tr>
@@ -71,9 +38,9 @@
 						<td height="11" valign="bottom" background="assets/img/r2_8.gif"><img src="assets/img/_.gif" width="11" height="11"></td>
 						<td width="11" height="11" align="right" valign="bottom"><img src="assets/img/r2_4.gif" width="11" height="11"></td>
 					</tr>
-			</table></td>
+				</table>
+			</td>
 		</tr>
 		{{ template "_footer" . }}
 	</table>
-	{{ template "_copy" . }}
-{{ end }}
+	{{ template "_copy" . }} {{ end }}
