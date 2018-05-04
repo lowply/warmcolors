@@ -21,7 +21,7 @@ func handler(page string) {
 		"templates/_copy.tmpl",
 	))
 
-	file, err := os.Create(page + ".html")
+	file, err := os.Create("docs/" + page + ".html")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -43,7 +43,7 @@ func handler_station(num string, sub string) {
 		"templates/station.tmpl",
 	))
 
-	file, err := os.Create("station" + num + ".html")
+	file, err := os.Create("docs/station" + num + ".html")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -76,7 +76,7 @@ func handler_profile(name string) {
 		"templates/_copy.tmpl",
 	))
 
-	file, err := os.Create("profile_" + name + ".html")
+	file, err := os.Create("docs/profile_" + name + ".html")
 	if err != nil {
 		log.Fatal(err)
 	}
