@@ -1,0 +1,128 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+	margin: 20px auto;
+	color: #4B4B4B;
+}
+
+.mein-line {
+	background-color: #C7C7AF;
+	width: 3px;
+}
+.mein-margine {
+	padding: 14px;
+}
+.column {
+	padding-left: 8px;
+}
+.td-1 {
+	background-color: #D6D6C2;
+	font-size: 10px;
+	vertical-align: top;
+	color: #333333;
+	line-height: 14px;
+	letter-spacing: 0.1em;
+}
+.td-2 {
+	background-color: #E9E9E0;
+	font-size: 10px;
+	vertical-align: top;
+	color: #333333;
+	line-height: 14px;
+	letter-spacing: 0.1em;
+	border: 1px solid #fff;
+}
+.event-wc {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #4D4C32;
+}
+.event-wc2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #4D4C32;
+	padding-bottom: 5px;
+}
+.profile-st {
+	font-size: 10px;
+	color: #333333;
+	padding: 10px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+}
+.profile-img {
+	padding: 10px;
+}
+.topics_event {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+}
+a:link {
+	color: #990000;
+	text-decoration: none;
+}
+a:visited {
+	color: #990000;
+	text-decoration: none;
+}
+a:hover {
+	color: #990000;
+	text-decoration: underline;
+	background-color: #CCCCCC;
+}
+a:active {
+	color: #990000;
+	text-decoration: none;
+}
+.radio-st {
+	font-size: 10px;
+	color: #666666;
+	letter-spacing: 0.1em;
+}
+body {
+	background-color: #FFFFFF;
+}
+.event-online {
+	font-size: 10px;
+	color: #666666;
+	padding: 10px;
+}
+.chart-st {
+	font-size: 10px;
+	color: #666666;
+}
+.chart-month {
+	font-size: 12px;
+	color: #4D4C32;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.news {
+	font-size: 10px;
+	color: #333333;
+	letter-spacing: 0.1em;
+}
+.topics {
+	font-size: 11px;
+	color: #333333;
+	background-color: #E9E9E0;
+	line-height: 14px;
+}
+.notes {
+	font-size: 9px;
+	color: #FF3300;
+}
+.profile-guestname {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+}
+.news-scroll {
+	overflow: auto;
+	height: 100px;
+	width: 486px;
+}
