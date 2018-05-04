@@ -3,13 +3,10 @@
   "version": "1.0.0",
   "description": "warmcolors.info",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass --output-style compressed --source-map true ./src/main.scss -o ./docs/assets/css",
-    "sassw": "node-sass -w --output-style nested ./src/main.scss -o ./docs/assets/css"
+    "sass": "node-sass --output-style compressed --source-map true ./src/main.scss -o ./assets/css",
+    "sassw": "node-sass -w --output-style nested ./src/main.scss -o ./assets/css"
   },
   "repository": {
     "type": "git",
