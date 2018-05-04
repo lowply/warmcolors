@@ -8,8 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass --output-style compressed --source-map true ./docs/assets/css/main.scss -o ./docs/assets/css",
-    "sassw": "node-sass -w --output-style nested ./docs/assets/css/main.scss -o ./docs/assets/css"
+    "sass": "node-sass --output-style compressed --source-map true ./src/main.scss -o ./docs/assets/css",
+    "sassw": "node-sass -w --output-style nested ./src/main.scss -o ./docs/assets/css"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/lowply/warmcolors.info#readme",
   "devDependencies": {
+    "bootstrap": "^4.1.1",
     "node-sass": "^4.9.0"
   }
 }
