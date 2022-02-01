@@ -2,7 +2,6 @@
 
 aws \
     s3 sync \
-    --exclude "assets/img/*" \
-    --exclude "assets/radio/*" \
+    --exclude "assets/*" \
     --delete \
-    ./_site/ s3://lowply.org/warmcolors/
+    ./_site/ s3://lowply.net/warmcolors/
