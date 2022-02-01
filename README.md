@@ -1,7 +1,10 @@
-# lowply.org/warmcolors
+# lowply.net/warmcolors
 
-[lowply.org/warmcolors](https://lowply.org/warmcolors/) - Used to be warmcolors.info
+[lowply.net/warmcolors](https://lowply.net/warmcolors/) - Used to be warmcolors.info
 
 ## Development
 
-TBD
+```
+bundle install
+make build
+```
