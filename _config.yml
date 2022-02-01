@@ -4,8 +4,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 url: "https://lowply.net/warmcolors"
 markdown: kramdown
-plugins:
-  - jekyll-feed
 exclude:
   - script
   - README.md
