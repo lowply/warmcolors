@@ -1,9 +1,8 @@
-title: warmcolors.info
-email: lowply@gmail.com
+title: warmcolors
 description: >- # this means to ignore newlines until "baseurl:"
-  warmcolors.info
+  warmcolors
 baseurl: ""
-url: ""
+url: "https://lowply.net/warmcolors"
 markdown: kramdown
 theme: minima
 plugins:
