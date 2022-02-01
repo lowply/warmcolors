@@ -1,7 +1,4 @@
 _site
-.sass-cache
-.jekyll-metadata
 .jekyll-cache/*
-*.mp3
 assets/*
 !assets/main.scss
