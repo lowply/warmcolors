@@ -1,0 +1,4 @@
+overrides:
+- files: "*"
+  options:
+    printWidth: 120
