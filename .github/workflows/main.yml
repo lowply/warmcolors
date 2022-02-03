@@ -16,9 +16,13 @@ jobs:
           bundler-cache: true
       - name: Build Jekyll
         run: bundle exec jekyll build
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: OIDC
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubActions@warmcolors.info
+          aws-region: ap-northeast-1
       - name: Deploy to S3
         run: ./script/deploy.sh
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_DEFAULT_REGION: ap-northeast-1
