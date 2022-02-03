@@ -22,7 +22,7 @@ jobs:
       - name: Authenticate via OIDC
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/oidc/GitHubActions@warmcolors.info
+          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubActionsOIDC/warmcolors.info
           aws-region: ap-northeast-1
       - name: Deploy to S3
         run: ./script/deploy.sh
