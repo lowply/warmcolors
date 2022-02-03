@@ -7,7 +7,7 @@ permissions:
   id-token: write
   contents: read
 jobs:
-  build:
+  main:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -19,11 +19,7 @@ jobs:
           bundler-cache: true
       - name: Build Jekyll
         run: bundle exec jekyll build
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: OIDC
+      - name: Authenticate via OIDC
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/oidc/GitHubActions@warmcolors.info
