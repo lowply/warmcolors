@@ -2,8 +2,8 @@
 
 find . -name .DS_Store -delete -exec echo removed: {} \;
 
-aws \
-    --profile s3backup \
-    s3 sync \
-    --delete \
-    ./assets/ s3://lowply.net/warmcolors/assets/
+az storage blob sync \
+    --account-name lowplynet \
+    --source ./assets \
+    --container '$web/warmcolors/assets' \
+    --delete-destination true

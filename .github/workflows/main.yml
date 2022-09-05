@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -19,10 +19,11 @@ jobs:
           bundler-cache: true
       - name: Build Jekyll
         run: bundle exec jekyll build
-      - name: Authenticate via OIDC
-        uses: aws-actions/configure-aws-credentials@v1
+      - name: "Login to Azure with OIDC"
+        uses: azure/login@v1
         with:
-          role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubActionsOIDC/warmcolors.info
-          aws-region: ap-northeast-1
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       - name: Deploy to S3
         run: ./script/deploy.sh

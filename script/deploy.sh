@@ -1,7 +1,8 @@
 #!/bin/bash
 
-aws \
-    s3 sync \
-    --exclude "assets/*" \
-    --delete \
-    ./_site/ s3://lowply.net/warmcolors/
+az storage blob sync \
+    --account-name lowplynet \
+    --source ./_site \
+    --container '$web/warmcolors' \
+    --exclude-path assets \
+    --delete-destination true
