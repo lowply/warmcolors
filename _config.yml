@@ -2,7 +2,7 @@ title: warmcolors
 description: >- # this means to ignore newlines until "baseurl:"
   warmcolors
 baseurl: ""
-url: "https://lowply.net/warmcolors"
+url: "https://lowply.net/warmcolors/"
 markdown: kramdown
 exclude:
   - script
