@@ -1,4 +1,4 @@
-# lowply.net/warmcolors
+# lowply/warmcolors
 
 [lowply.net/warmcolors](https://lowply.net/warmcolors/) - Used to be warmcolors.info
 
