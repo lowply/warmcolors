@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd -P)"
+SITE_DIR="${ROOT_DIR}/_site"
+ASSETS_DIR="${ROOT_DIR}/assets"
+AZURE_BLOB_PATH="https://lowplynet.blob.core.windows.net/\$web/warmcolors"
+
+find "${SITE_DIR}" -name .DS_Store -delete -print
+azcopy sync "${SITE_DIR}/" \
+    "${AZURE_BLOB_PATH}/" \
+    --recursive \
+    --exclude-path assets \
+    --delete-destination=true
+
+find "${ASSETS_DIR}" -name .DS_Store -delete -print
+azcopy sync "${ASSETS_DIR}/" \
+    "${AZURE_BLOB_PATH}/assets/" \
+    --recursive \
+    --delete-destination=true

@@ -1,4 +1,4 @@
 _site
 .jekyll-cache/*
-assets/*
-!assets/main.scss
+assets
+
